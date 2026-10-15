@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e83e9e">
+  <title>Connect | Philly P’arriba</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="ack-page">
+  <main class="ack-card">
+    <img class="ack-logo" src="assets/Logo-Bell.png" alt="Philly P’arriba Liberty Bell logo">
+    <p class="eyebrow">One step before WhatsApp</p>
+    <h1>Community first.</h1>
+    <p>Philly P’arriba is committed to a safe, welcoming, and respectful dance community. By joining, you agree to follow our community expectations and Code of Conduct.</p>
+    <p><strong>Code of Conduct:</strong> A full linked version can be added here as soon as it is published.</p>
+    <label class="acknowledge">
+      <input id="agree" type="checkbox">
+      <span>I have read the community expectations and agree to abide by the Philly P’arriba Code of Conduct.</span>
+    </label>
+    <a id="continue" class="button button-primary" aria-disabled="true" href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fchat.whatsapp.com%2FDuT7YPWujOXAOyyMbZPFNk%3Fmode%3Dgi_t&data=05%7C02%7Clydia.wilson%40jefferson.edu%7Cf0e63ef69c684987470208df29f2bca4%7C55a89906c710436bbc444c590cb67c4a%7C0%7C0%7C639275794686364356%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=XaGAQI2QCP8BIb1Lo4sGighIgFE24lS6I3D3jakDRW0%3D&reserved=0" target="_blank" rel="noopener noreferrer">Continue to WhatsApp</a>
+    <p class="notice">This webpage acknowledgement is not stored. If you need a dated record of agreement, replace this step with a form service such as Google Forms or Microsoft Forms.</p>
+    <a class="back-link" href="index.html">← Back to the homepage</a>
+  </main>
+  <script>
+    const agree = document.getElementById('agree');
+    const link = document.getElementById('continue');
+    agree.addEventListener('change', () => link.setAttribute('aria-disabled', String(!agree.checked)));
+    link.addEventListener('click', event => { if (!agree.checked) event.preventDefault(); });
+  </script>
+</body>
+</html>
